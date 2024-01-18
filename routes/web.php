@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\medi;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home',[medi::class,'index']);
+Route::get('/book',[medi::class,'book']);
+Route::get('/docter',[medi::class,'docter']);
+Route::get('/make',[medi::class,'make']);
+Route::get('/fever',[medi::class,'fever']);
